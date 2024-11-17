@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Trade</title>
+    <script type="module" src="register.js" defer></script>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0f1111;
+}
+
+.box{
+width: 50%;
+height: 100vh;
+float: right;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.box1{
+width: 50%;
+height: 100vh;
+background-color: white;
+float: left;
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+}
+
+.login{
+    margin: auto;
+    
+}
+
+h4{
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+h3{
+    font-family: Raleway;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.inputfield{
+    font-family: Raleway;
+    font-size: 16px;
+    height: 50px;
+    width: 300px;
+    margin-bottom: 12px;
+}
+.inputfield>input{
+    border: none;
+    margin-left: 8px;
+    width: 280px;
+    height: 20px;
+    outline: none;
+}
+
+select{
+    border: none;
+    margin-left: 8px;
+    width: 280px;
+    height: 20px;
+    outline: none;
+}
+a{
+    font-family: Raleway ;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+fieldset{
+    border-color: #0f1111;
+    border-radius: 8px;
+}
+
+
+legend{
+    margin-left: 8px;
+}
+button{
+    width: 300px;
+    height: 40px;
+    border-radius: 8px;
+    background: #0f1111;
+    color: white;
+    font-family: Raleway;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+img{
+    width: 350px;
+    height: 150px;
+}
+.h3{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 15px;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+@media screen and (max-width: 679px) {
+    .box{
+        width: 100%;
+        height: 8rem;
+    }
+    
+    .box1{
+        width: 100%;
+    }
+}
+    </style>
+    <div class="box">
+        <img src="Amazon Trade Logo.png" alt="">
+    </div>
+    <div class="box1">
+        <div class="login">
+        <h4>Start your Business</h4>
+        <h3>Sign Up to Amazon Trade</h3>
+        <fieldset class="inputfield">
+            <Legend>E-Mail</Legend>
+            <input type="text" id="email">
+        </fieldset>
+
+        <fieldset class="inputfield">
+            <Legend>Password</Legend>
+            <input type="password" id="password" required>
+        </fieldset>
+        <br>
+        <Button id="submit">Sign Up</Button>
+        <br>
+        <div class="links"><br>
+            Already have an account  <a href="index.html">SIGN IN</a>
+        </div>
+        <div class="google">
+            <h3 class="h3">Or</h3>
+            <button class="button" type="sign-in-with-google"><img class="img" src="google icon.png" alt="">Sign In With Google</button>
+        </div>
+    </div>
+    
+</body>
+</html>

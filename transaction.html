@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Trade</title>
+    <script src="https://kit.fontawesome.com/7717c1610a.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    *{
+        margin: 0%;
+        padding: 0;
+        background: border-box;
+    }
+    .header{
+        width: 100vw;
+        height: 60px;
+        background-color: #0f1111;
+        display: flex;
+        position: fixed;
+    }
+    .container{
+        width: 100vw;
+        margin-top: 60px;
+        display: flex;
+        position: fixed;
+    }
+    .sidebar{
+        width: 25%;
+        height: 100vh;
+        background-color: #0f1111;
+    }
+    
+    button{
+        color: white;
+        border-color: white;
+        border-radius: 10px;
+        width: 260px;
+        height: 50px;
+        margin-top: 1rem;
+        font: Poppins;
+        font-weight: bold;
+        font-size: 14px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    i{
+        margin-inline: 12px;
+    }
+    h4{
+        font-family: Poppins;
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        margin: auto;
+        font-weight: 400;
+        padding: 25px;
+    }
+    .main-content {
+      margin-left: 20%;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .transactions {
+      margin-top: 80px;
+      padding: 20px;
+      background-color: #c4c4c4;
+      border-radius: 8px;
+    }
+
+    .transactions h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .metrics {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .metrics div {
+      text-align: center;
+    }
+
+    .transactions-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .transactions-table th, .transactions-table td {
+      padding: 15px;
+      text-align: left;
+    }
+
+    .transactions-table th {
+      background-color: rgb(255, 255, 255);
+    }
+
+    .transactions-table tr:nth-child(odd) {
+      background-color: rgb(255, 255, 255);
+    }
+
+    .transactions-table .status-paid {
+      color: green;
+    }
+
+    .transactions-table .status-pending {
+      color: orange;
+    }
+
+    .filter-section {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .filter-section input, .filter-section button {
+      padding: 10px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .filter-section button {
+      background-color: #222;
+      color: white;
+      cursor: pointer;
+    }
+
+    .filter-section button:hover {
+      background-color: #444;
+    }
+    
+</style>
+<body>
+    <div class="header">
+        <img src="Amazon Trade Logo.png" alt="">
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <h4>Hii, Traders</h4>
+            <button onclick="location.href='home.html'"><span><i class="fa-solid fa-house"></i></span>HOME</button>
+    <button onclick="location.href='profile.html'"><span><i class="fa-solid fa-user"></i></span>PROFILE</button>
+    <button onclick="location.href='inventory.html'"><span><i class="fa-solid fa-box"></i></span>INVENTORY</button>
+    <button onclick="location.href='notification.html'"><span><i class="fa-solid fa-bell"></i></span>NOTIFICATIONS</button>
+    <button onclick="location.href='orders.html'"><span><i class="fa-solid fa-clipboard-list"></i></span>ORDERS & REFUNDS</button>
+    <button onclick="location.href='invoice.html'"><span><i class="fa-solid fa-receipt"></i></span>INVOICE</button>
+    <button onclick="location.href='shipping.html'"><span><i class="fa-solid fa-truck-fast"></i></span>SHIPPING</button>
+    <button onclick="location.href='management.html'"><span><i class="fa-solid fa-bars-progress"></i></span>MANAGEMENT</button>
+    <button onclick="location.href='index.html'"><span><i class="fa-solid fa-right-from-bracket"></i></span>LOGOUT</button>
+
+        </div>
+        
+            </div>
+        
+            <div class="main-content">
+                <div class="transactions">
+                  <div class="filter-section">
+                    <input type="date" placeholder="dd/mm/yyyy">
+                    <input type="search" placeholder="Search">
+                    <button>FILTER</button>
+                  </div>
+                  <div class="metrics">
+                    <div>
+                      <h3>₹5,00,000</h3>
+                      <p>Total Sales</p>
+                    </div>
+                    <div>
+                      <h3>100</h3>
+                      <p>Total Orders</p>
+                    </div>
+                    <div>
+                      <h3>₹10,000</h3>
+                      <p>Total Refunds</p>
+                    </div>
+                  </div>
+                  <table class="transactions-table">
+                    <tr>
+                      <th>ORDERS ID</th>
+                      <th>DATE</th>
+                      <th>PRODUCT</th>
+                      <th>AMOUNT</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>#0090</td>
+                      <td>01/NOV/24</td>
+                      <td>LAPTOP</td>
+                      <td>₹69,000</td>
+                      <td class="status-paid">PAID</td>
+                    </tr>
+                    <tr>
+                      <td>#0010</td>
+                      <td>29/OCT/24</td>
+                      <td>MOBILE</td>
+                      <td>₹30,000</td>
+                      <td class="status-pending">PENDING</td>
+                    </tr>
+                    <tr>
+                      <td>#0025</td>
+                      <td>26/OCT/24</td>
+                      <td>LAPTOP</td>
+                      <td>₹69,000</td>
+                      <td class="status-paid">PAID</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+          </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

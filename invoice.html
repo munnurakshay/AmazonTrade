@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Trade</title>
+    <script src="https://kit.fontawesome.com/7717c1610a.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    *{
+        margin: 0%;
+        padding: 0;
+        background: border-box;
+    }
+    .header{
+        width: 100vw;
+        height: 60px;
+        background-color: #0f1111;
+        display: flex;
+        position: fixed;
+    }
+    .container{
+        width: 100vw;
+        margin-top: 60px;
+        display: flex;
+        position: fixed;
+    }
+    .sidebar{
+        width: 25%;
+        height: 100vh;
+        background-color: #0f1111;
+    }
+    .main{
+        width: 75%;
+        height: 100vh;
+    }
+    button{
+        color: white;
+        border-color: white;
+        border-radius: 10px;
+        width: 260px;
+        height: 50px;
+        margin-top: 1rem;
+        font: Poppins;
+        font-weight: bold;
+        font-size: 14px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    i{
+        margin-inline: 12px;
+    }
+    h4{
+        font-family: Poppins;
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        margin: auto;
+        font-weight: 400;
+        padding: 25px;
+    }
+
+    .main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.invoice-form, .invoice-preview {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.button1 {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button#downloadBtn {
+    background-color: #2ecc71;
+}
+
+#invoiceOutput {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+    
+</style>
+<body>
+    <div class="header">
+        <img src="Amazon Trade Logo.png" alt="">
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <h4>Hii, Traders</h4>
+            <button onclick="location.href='home.html'"><span><i class="fa-solid fa-house"></i></span>HOME</button>
+    <button onclick="location.href='profile.html'"><span><i class="fa-solid fa-user"></i></span>PROFILE</button>
+    <button onclick="location.href='inventory.html'"><span><i class="fa-solid fa-box"></i></span>INVENTORY</button>
+    <button onclick="location.href='notification.html'"><span><i class="fa-solid fa-bell"></i></span>NOTIFICATIONS</button>
+    <button onclick="location.href='orders.html'"><span><i class="fa-solid fa-clipboard-list"></i></span>ORDERS & REFUNDS</button>
+    <button onclick="location.href='invoice.html'"><span><i class="fa-solid fa-receipt"></i></span>INVOICE</button>
+    <button onclick="location.href='shipping.html'"><span><i class="fa-solid fa-truck-fast"></i></span>SHIPPING</button>
+    <button onclick="location.href='management.html'"><span><i class="fa-solid fa-bars-progress"></i></span>MANAGEMENT</button>
+    <button onclick="location.href='index.html'"><span><i class="fa-solid fa-right-from-bracket"></i></span>LOGOUT</button>
+
+        </div>
+        <!-- Main Content -->
+        <div class="main-content">
+          <header>
+              <h1>Invoice Dashboard</h1>
+          </header>
+
+          <!-- Invoice Form -->
+          <section class="invoice-form">
+              <h2>Invoice Details</h2>
+              <form id="invoiceForm">
+                  <label for="product">Product:</label>
+                  <input type="text" id="product" name="product" required>
+
+                  <label for="quantity">Quantity:</label>
+                  <input type="number" id="quantity" name="quantity" required>
+
+                  <label for="address">Address:</label>
+                  <textarea id="address" name="address" required></textarea>
+
+                  <div class="buttons">
+                      <button class="button1" type="button" id="previewBtn">Preview</button>
+                      <button type="button" id="downloadBtn">Download PDF</button>
+                  </div>
+              </form>
+          </section>
+
+          <!-- Invoice Preview -->
+          <section class="invoice-preview">
+              <h2>Invoice Preview</h2>
+              <div id="invoiceOutput">
+                  <!-- Dynamic content will be injected here -->
+              </div>
+          </section>
+      </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const previewBtn = document.getElementById('previewBtn');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const invoiceOutput = document.getElementById('invoiceOutput');
+    const form = document.getElementById('invoiceForm');
+
+    previewBtn.addEventListener('click', () => {
+        const product = form.product.value;
+        const quantity = form.quantity.value;
+        const address = form.address.value;
+        const unitPrice = 69000; // Example fixed price
+        const subtotal = quantity * unitPrice;
+        const tax = subtotal * 0.12;
+        const total = subtotal + tax;
+
+        invoiceOutput.innerHTML = `
+            <h3>Invoice</h3>
+            <p><strong>Product:</strong> ${product}</p>
+            <p><strong>Quantity:</strong> ${quantity}</p>
+            <p><strong>Unit Price:</strong> ₹${unitPrice}</p>
+            <p><strong>Subtotal:</strong> ₹${subtotal}</p>
+            <p><strong>Tax:</strong> ₹${tax.toFixed(2)}</p>
+            <p><strong>Total:</strong> ₹${total.toFixed(2)}</p>
+            <p><strong>Address:</strong> ${address}</p>
+        `;
+    });
+
+    downloadBtn.addEventListener('click', () => {
+        alert('Download feature can be implemented using libraries like jsPDF.');
+    });
+});
+
+  </script>
+    </div>
+    
+</body>
+</html>

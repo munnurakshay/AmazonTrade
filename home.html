@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Trade</title>
+    <script src="https://kit.fontawesome.com/7717c1610a.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    *{
+        margin: 0%;
+        padding: 0;
+        background: border-box;
+    }
+    .header{
+        width: 100vw;
+        height: 60px;
+        background-color: #0f1111;
+        display: flex;
+        position: fixed;
+    }
+    .container{
+        width: 100vw;
+        margin-top: 60px;
+        display: flex;
+        position: fixed;
+    }
+    .sidebar{
+        width: 25%;
+        height: 100vh;
+        background-color: #0f1111;
+    }
+    .main{
+        width: 75%;
+        height: 100vh;
+    }
+    button{
+        color: white;
+        border-color: white;
+        border-radius: 10px;
+        width: 260px;
+        height: 50px;
+        margin-top: 1rem;
+        font: Poppins;
+        font-weight: bold;
+        font-size: 14px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    i{
+        margin-inline: 12px;
+        color: WHITE;
+    }
+    h4{
+        font-family: Poppins;
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        margin: auto;
+        font-weight: 400;
+        padding: 25px;
+    }
+    .box {
+        background-color: white;
+        width: 80%;
+        height: 100vh;
+    }
+    h2{
+        font-family: Poppins;
+        font-weight: 500;
+        color: white;
+    }
+    .overviewContainer{
+        width: 90%;
+        height: 90%;
+        margin:auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #overviewContent{
+        width: 100%;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .option{
+        width: 80%;
+        height: 60vh;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1.5rem;
+    }
+    .option .box1{
+        width: 18rem;
+        height: 8rem;
+        border-radius: 8px;
+        background-color: #0f1111;
+    }
+    
+    input{
+        background-color: white;
+        padding-inline: 0.9rem;
+        width: 250px;
+        height: 35px;
+        border-radius: 9px;
+    }
+    h2{
+      color: #0f1111;
+    }
+
+    .box1{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    p{
+      font-family: Poppins;
+      font-weight: 400;
+      font-size: 20px;
+      color: white;
+    }
+   
+</style>
+<body>
+    <div class="header">
+        <img src="Amazon Trade Logo.png" alt="">
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <h4>Hii, Traders</h4>
+            <button onclick="location.href='home.html'"><span><i class="fa-solid fa-house"></i></span>HOME</button>
+    <button onclick="location.href='profile.html'"><span><i class="fa-solid fa-user"></i></span>PROFILE</button>
+    <button onclick="location.href='inventory.html'"><span><i class="fa-solid fa-box"></i></span>INVENTORY</button>
+    <button onclick="location.href='notification.html'"><span><i class="fa-solid fa-bell"></i></span>NOTIFICATIONS</button>
+    <button onclick="location.href='orders.html'"><span><i class="fa-solid fa-clipboard-list"></i></span>ORDERS & REFUNDS</button>
+    <button onclick="location.href='invoice.html'"><span><i class="fa-solid fa-receipt"></i></span>INVOICE</button>
+    <button onclick="location.href='shipping.html'"><span><i class="fa-solid fa-truck-fast"></i></span>SHIPPING</button>
+    <button onclick="location.href='management.html'"><span><i class="fa-solid fa-bars-progress"></i></span>MANAGEMENT</button>
+    <button onclick="location.href='index.html'"><span><i class="fa-solid fa-right-from-bracket"></i></span>LOGOUT</button>
+
+        </div>
+        <section class="box">
+          <div class="overviewContainer">
+              <div id="overviewContent">
+                  <h2>Overview</h2>
+                  <input type="search" placeholder="Search">
+              </div>
+              <div class="option">
+                  <div class="box1">
+                    <a href="transaction.html"><p><i class="fa-solid fa-credit-card"></i>ALL TRASACTIONS</p></a>
+                  </div>
+                  <div class="box1">
+                    <a href="#"><p><i class="fa-solid fa-chart-simple"></i>REPORTS</p></a>
+                  </div>
+                  <div class="box1">
+                    <a href="shipping.html"><p><i class="fa-solid fa-truck-fast"></i>SHIPPING</p></a>
+                  </div>
+                  <div class="box1">
+                    <a href="orders.html"><p><i class="fa-solid fa-clipboard-list"></i>ORDERS</p></a>
+                  </div>
+                  <div class="box1">
+                    <a href="inventory.html"><p><i class="fa-solid fa-box"></i>INVENTORY</p></a>
+                  </div>
+                  <div class="box1">
+                    <a href="communication.html"><p><i class="fa-solid fa-comment"></i>COMMUNICATIONS</p></a>
+                  </div>
+                  <div class="box1">
+                    <a href="#"><p><i class="fa-solid fa-headset"></i>AI ASSIST</p></a>
+                  </div>
+                  <div class="box1">
+                    <a href="documentation.html"><p><i class="fa-solid fa-file"></i>DOCUMENTAION</p></a>
+                  </div>
+              </div>
+          </div>
+      </section>
+    <script>
+      // scripts.js
+document.querySelector('.search-bar button').addEventListener('click', () => {
+  const query = document.querySelector('.search-bar input').value;
+  alert(`Search initiated for: ${query}`);
+});
+
+document.querySelector('.logout').addEventListener('click', () => {
+  alert('Logging out...');
+});
+
+    </script>
+</body>
+</html>

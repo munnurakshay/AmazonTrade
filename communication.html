@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Trade</title>
+    <script src="https://kit.fontawesome.com/7717c1610a.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    *{
+        margin: 0%;
+        padding: 0;
+        background: border-box;
+    }
+    .header{
+        width: 100vw;
+        height: 60px;
+        background-color: #0f1111;
+        display: flex;
+        position: fixed;
+    }
+    .container{
+        width: 100vw;
+        margin-top: 60px;
+        display: flex;
+        position: fixed;
+    }
+    .sidebar{
+        width: 25%;
+        height: 100vh;
+        background-color: #0f1111;
+    }
+    .main{
+        width: 75%;
+        height: 100vh;
+    }
+    button{
+        color: white;
+        border-color: white;
+        border-radius: 10px;
+        width: 260px;
+        height: 50px;
+        margin-top: 1rem;
+        font: Poppins;
+        font-weight: bold;
+        font-size: 14px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    i{
+        margin-inline: 12px;
+    }
+    h4{
+        font-family: Poppins;
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        margin: auto;
+        font-weight: 400;
+        padding: 25px;
+    }
+
+
+    .communication-header {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      background-color: #fff;
+    }
+
+    .communication-header h2 {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .back-button {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .communication-body {
+      display: flex;
+      height: 100%;
+    }
+
+    /* Contact List */
+    .contact-list {
+      width: 30%;
+      background-color: #ddd;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .contact-list button {
+      background-color: #fff;
+      border: none;
+      padding: 0.8rem;
+      text-align: left;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .contact-list button:hover {
+      background-color: #ccc;
+    }
+
+    /* Chat Window */
+    .chat-window {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #fff;
+      padding: 1rem;
+    }
+
+    .chat-message {
+      margin-bottom: 1rem;
+    }
+
+    .chat-message.received {
+      background-color: #f0f0f0;
+      padding: 0.8rem;
+      border-radius: 10px;
+      width: fit-content;
+    }
+
+    .chat-input {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .chat-input input {
+      flex-grow: 1;
+      padding: 0.8rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .send-button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    button.button{
+        background-color: #0f1111;
+        width: 200px;
+    }
+    
+</style>
+<body>
+    <div class="header">
+        <img src="Amazon Trade Logo.png" alt="">
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <h4>Hii, Traders</h4>
+            <button onclick="location.href='home.html'"><span><i class="fa-solid fa-house"></i></span>HOME</button>
+    <button onclick="location.href='profile.html'"><span><i class="fa-solid fa-user"></i></span>PROFILE</button>
+    <button onclick="location.href='inventory.html'"><span><i class="fa-solid fa-box"></i></span>INVENTORY</button>
+    <button onclick="location.href='notification.html'"><span><i class="fa-solid fa-bell"></i></span>NOTIFICATIONS</button>
+    <button onclick="location.href='orders.html'"><span><i class="fa-solid fa-clipboard-list"></i></span>ORDERS & REFUNDS</button>
+    <button onclick="location.href='invoice.html'"><span><i class="fa-solid fa-receipt"></i></span>INVOICE</button>
+    <button onclick="location.href='shipping.html'"><span><i class="fa-solid fa-truck-fast"></i></span>SHIPPING</button>
+    <button onclick="location.href='management.html'"><span><i class="fa-solid fa-bars-progress"></i></span>MANAGEMENT</button>
+    <button onclick="location.href='index.html'"><span><i class="fa-solid fa-right-from-bracket"></i></span>LOGOUT</button>
+
+        </div>
+        <div class="main-content">
+            <div class="communication-header">
+              <button class="back-button">&larr;</button>
+              <h2>COMMUNICATION</h2>
+            </div>
+      
+            <div class="communication-body">
+              <div class="contact-list">
+                <button class="button">RS Brothers</button>
+                <button class="button">South India</button>
+                <button class="button">KLM</button>
+                <button class="button">Cool Gadgets</button>
+                <button class="button">Happy Stores</button>
+                <button class="button">Mi Stores</button>
+                <button class="button">Samsung</button>
+                <button class="button">IQOO</button>
+              </div>
+              <div class="chat-window">
+                <div class="chat-message received">
+                  <p>Thank you sir order has been delivered today?</p>
+                </div>
+                <div class="chat-input">
+                  <input type="text" placeholder="Ask Something....................">
+                  <button class="send-button">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Trade</title>
+    <script src="https://kit.fontawesome.com/7717c1610a.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    *{
+        margin: 0%;
+        padding: 0;
+        background: border-box;
+    }
+    .header{
+        width: 100vw;
+        height: 60px;
+        background-color: #0f1111;
+        display: flex;
+        position: fixed;
+    }
+    .container{
+        width: 100vw;
+        margin-top: 60px;
+        display: flex;
+        position: fixed;
+    }
+    .sidebar{
+        width: 25%;
+        height: 100vh;
+        background-color: #0f1111;
+    }
+    .main{
+        width: 75%;
+        height: 100vh;
+    }
+    button{
+        color: white;
+        border-color: white;
+        border-radius: 10px;
+        width: 260px;
+        height: 50px;
+        margin-top: 1rem;
+        font: Poppins;
+        font-weight: bold;
+        font-size: 14px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    i{
+        margin-inline: 12px;
+    }
+    h4{
+        font-family: Poppins;
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        margin: auto;
+        font-weight: 400;
+        padding: 25px;
+    }
+    
+    main {
+    width: 80%;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+.metrics {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.metric {
+    background: #3498db;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 30%;
+}
+
+.employee-details {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+    
+    
+</style>
+<body>
+    <div class="header">
+        <img src="Amazon Trade Logo.png" alt="">
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <h4>Hii, Traders</h4>
+            <button onclick="location.href='home.html'"><span><i class="fa-solid fa-house"></i></span>HOME</button>
+    <button onclick="location.href='profile.html'"><span><i class="fa-solid fa-user"></i></span>PROFILE</button>
+    <button onclick="location.href='inventory.html'"><span><i class="fa-solid fa-box"></i></span>INVENTORY</button>
+    <button onclick="location.href='notification.html'"><span><i class="fa-solid fa-bell"></i></span>NOTIFICATIONS</button>
+    <button onclick="location.href='orders.html'"><span><i class="fa-solid fa-clipboard-list"></i></span>ORDERS & REFUNDS</button>
+    <button onclick="location.href='invoice.html'"><span><i class="fa-solid fa-receipt"></i></span>INVOICE</button>
+    <button onclick="location.href='shipping.html'"><span><i class="fa-solid fa-truck-fast"></i></span>SHIPPING</button>
+    <button onclick="location.href='management.html'"><span><i class="fa-solid fa-bars-progress"></i></span>MANAGEMENT</button>
+    <button onclick="location.href='index.html'"><span><i class="fa-solid fa-right-from-bracket"></i></span>LOGOUT</button>
+
+        </div>
+        <main>
+            <header>
+                <h1>Hi Traders!</h1>
+                <p>Welcome to the Management Dashboard</p>
+            </header>
+
+            <section class="metrics">
+                <div class="metric">
+                    <h3>Orders</h3>
+                    <p>250</p>
+                </div>
+                <div class="metric">
+                    <h3>Delivered</h3>
+                    <p>240</p>
+                </div>
+                <div class="metric">
+                    <h3>Working Days</h3>
+                    <p>350</p>
+                </div>
+            </section>
+
+            <section class="employee-details">
+                <h2>Employee Details</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>July</th>
+                            <th>August</th>
+                            <th>September</th>
+                            <th>October</th>
+                            <th>November</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Akshay</td>
+                            <td>10</td>
+                            <td>15</td>
+                            <td>20</td>
+                            <td>30</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>Yashwanth</td>
+                            <td>5</td>
+                            <td>10</td>
+                            <td>15</td>
+                            <td>25</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Nizam</td>
+                            <td>8</td>
+                            <td>12</td>
+                            <td>18</td>
+                            <td>28</td>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <td>Sanjeevni</td>
+                            <td>12</td>
+                            <td>14</td>
+                            <td>16</td>
+                            <td>26</td>
+                            <td>18</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
